@@ -1,0 +1,1 @@
+docker-compose exec db mongoimport -u admin -d admin -c parlamentares --type CSV --file ./parlamentares/parlamentares.csv --headerline

@@ -1,0 +1,29 @@
+{
+  "name": "parla-social",
+  "version": "1.0.0",
+  "description": " Exploring and showing data from social media from members of National Congress of Brazil",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gileadekelvin/parla-social.git"
+  },
+  "author": "gileadekelvin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gileadekelvin/parla-social/issues"
+  },
+  "homepage": "https://github.com/gileadekelvin/parla-social#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.17"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
