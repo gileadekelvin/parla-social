@@ -16,7 +16,7 @@ export class ParlamentarService {
 
   constructor(private http: HttpClient) { }
 
-  getPerguntas(): Observable<Parlamentar[]> {
+  getParlamentares(): Observable<Parlamentar[]> {
     return this.http.get<Parlamentar[]>(this.url).pipe(map(data => data.map(parlamentar => new Parlamentar(parlamentar))));
   }
 
