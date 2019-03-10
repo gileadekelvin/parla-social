@@ -1,10 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const users = require("./routes/parlamentares");
 
 const app = express();
+
+const corsOption = {
+  origin: "http://localhost:4200",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  exposedHeaders: ["authorization"]
+};
+
+app.use(cors(corsOption));
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));

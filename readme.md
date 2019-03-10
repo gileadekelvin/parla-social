@@ -37,6 +37,15 @@ Caso seu banco mongo não seja local é possível ainda executar a aplicação s
 docker-compose -f docker-compose-alt.yml up --build
 ```
 
+**ATENÇÃO!!!**: Sempre que uma nova dependência for instalada é preciso zerar o container e reiniciá-lo. Para isto execute:
+```
+docker-compose down --volumes
+```
+E em seguida
+```
+docker-compose -f docker-compose-alt.yml up --build
+```
+
 #### Comandos úteis
 
 Pare o container atual rodando a aplicação e apague os volumes
