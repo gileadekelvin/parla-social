@@ -16,14 +16,21 @@ export class ParlamentarContainerComponent implements OnInit, OnDestroy {
 
   private unsubscribe = new Subject();
 
-  parlamentares: Parlamentar[];
+  page: number;  
 
-  constructor(private parlamentarService: ParlamentarService) { }
+  parlamentares: Parlamentar[];
+  temResposta: boolean;  
+
+  constructor(private parlamentarService: ParlamentarService) {
+    // Inicia na página inicial
+    this.page = 1;
+  }
 
   ngOnInit() {
     this.parlamentarService.getParlamentares().pipe(takeUntil(this.unsubscribe)).subscribe(
       res => {
-        this.parlamentares = res;
+        this.parlamentares = res;        
+        this.temResposta = true;        
       },
       error => console.log(error)
     );

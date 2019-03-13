@@ -21,6 +21,10 @@ export class Parlamentar {
     }
   
     getFoto(): string {
-      return "https://www.camara.leg.br/internet/deputado/bandep/" + this.id + ".jpg";
+      if(this.house === "câmara") {
+        return "https://www.camara.leg.br/internet/deputado/bandep/" + this.id + ".jpg";
+      } else {
+        return "https://www.senado.gov.br/senadores/img/fotos-oficiais/senador" + this.id + ".jpg"
+      }            
     }
   }
