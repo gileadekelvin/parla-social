@@ -1,10 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import '../node_modules/bootstrap/scss/functions';
 @import 'assets/bootstrap/variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
+@import 'assets/bootstrap/_overhide';
+
+$text-color: #b2bbbd;
 
 body {
   min-height: 75rem;
   padding-top: $display3-size;
+  background-color: #edeff0;
+  color: #576366;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav-link {
+  color: $text-color;
+  font-weight: bold;    
+}
+
+.navbar-brand {
+  color: $text-color;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: #3e474f !important;    
 }

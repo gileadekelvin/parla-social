@@ -1,10 +1,9 @@
-.card-img-top {
-    width: 100px;
-    height: 130px;
-}
-
 .card-header {
     background: white;
+}
+
+.card-body {
+    background: #f8f9fa;
 }
 
 .name {
@@ -20,21 +19,33 @@
     font-size: 0.8rem;    
 }
 
-#social-tw {
-    margin-top: 2px;
-    margin-right: 4px;
-    color: #4099FF;
+.img-circle {
+    width: 90px;
+    height: 90px;    
 }
 
-#social-tw:hover {
-    opacity: 0.7;
+.img-parlamentar {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;    
+    border: 4px solid #eee;
 }
 
-#social-fb {
-    margin-top: 2px;
-    color: #3B5998;
+.icons {
+    text-align: center;    
 }
 
-#social-fb:hover {
-    opacity: 0.7;
+.icon-social {
+    margin: auto;
+}
+
+.icon-social i {
+    color: #b2bbbd;
+    font-size: 1.5rem;
+} 
+
+.icon-social i:hover {
+    color: #3e474f;
 }

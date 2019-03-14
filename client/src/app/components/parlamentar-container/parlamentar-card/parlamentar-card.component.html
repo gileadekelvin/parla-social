@@ -1,22 +1,29 @@
-<div class="card mt-3" style="width: 18rem;">
+<div class="card mt-3" style="width: 14rem;">
   <div class="card-header">
-    <div class="row">
-      <div class="col-4">
-        <img [defaultImage]="'https://via.placeholder.com/100x130'" [lazyLoad]="parlamentar.getFoto()" [offset]="100"
-          width="120%" />
-        <!-- <img class="card-img-top" src="assets/imgs/logo.png" alt="Card image cap"> -->
+    <div class="row mt-3 d-flex justify-content-center">
+      <div class="img-parlamentar">
+        <img class="img-circle" [defaultImage]="'https://via.placeholder.com/100x130'"
+          [lazyLoad]="parlamentar.getFoto()" [offset]="100" />
       </div>
-      <div class="col-7 ml-1">
-        <div class="row">
-          <span class="name">{{ formatString(parlamentar.electoral_name) }}</span>
-        </div>
-        <div class="row mb-1"><span class="party">{{ parlamentar.party }} - {{ parlamentar.state }}</span></div>
-        <div class="row"><span class="badge badge-secondary">{{ getCargo(parlamentar.house)}}</span></div>
-        <div class="row">
-          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/{{ parlamentar.twitter }}"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
-          <a target="_blank" rel="noopener noreferrer" href="{{ parlamentar.facebook }}"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
-        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <span class="name">{{ formatString(parlamentar.electoral_name) }}</span>
+    </div>
+    <div class="row mb-1 d-flex justify-content-center"><span class="badge badge-info mr-2">{{ parlamentar.party }} -
+        {{ parlamentar.state }}</span> <span class="badge badge-secondary">{{ getCargo(parlamentar.house)}}</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row d-flex justify-content-center icons">
+      <div class="col-6 icon-social">
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/{{ parlamentar.twitter }}">
+          <i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="col-6 icon-social">
+        <a target="_blank" rel="noopener noreferrer" href="{{ parlamentar.facebook }}">
+          <i class="fa fa-facebook"></i></a>
       </div>
     </div>
   </div>
+
 </div>
