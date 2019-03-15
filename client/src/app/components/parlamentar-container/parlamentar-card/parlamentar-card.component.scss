@@ -49,3 +49,13 @@
 .icon-social i:hover {
     color: #3e474f;
 }
+
+.card {
+    width: 14rem;
+}
+
+@media (max-width: 576.1px) { 
+    .card {
+        width: 20rem;
+    }    
+}

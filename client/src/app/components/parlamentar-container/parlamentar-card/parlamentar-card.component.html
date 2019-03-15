@@ -1,4 +1,4 @@
-<div class="card mt-3" style="width: 14rem;">
+<div class="card mt-3 mx-2">
   <div class="card-header">
     <div class="row mt-3 d-flex justify-content-center">
       <div class="img-parlamentar">
@@ -6,24 +6,27 @@
           [lazyLoad]="parlamentar.getFoto()" [offset]="100" />
       </div>
     </div>
-    <div class="row d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-2">
       <span class="name">{{ formatString(parlamentar.electoral_name) }}</span>
     </div>
-    <div class="row mb-1 d-flex justify-content-center"><span class="badge badge-info mr-2">{{ parlamentar.party }} -
+    <div class="d-flex justify-content-center"><span class="badge badge-info mr-2">{{ parlamentar.party }} -
         {{ parlamentar.state }}</span> <span class="badge badge-secondary">{{ getCargo(parlamentar.house)}}</span>
     </div>
   </div>
   <div class="card-body">
-    <div class="row d-flex justify-content-center icons">
-      <div class="col-6 icon-social">
+    <div class="d-flex icons">
+      <div class="icon-social">
         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/{{ parlamentar.twitter }}">
           <i class="fa fa-twitter"></i></a>
       </div>
-      <div class="col-6 icon-social">
+      <div class="icon-social">
         <a target="_blank" rel="noopener noreferrer" href="{{ parlamentar.facebook }}">
           <i class="fa fa-facebook"></i></a>
       </div>
+      <div class="icon-social">
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          <i class="fa fa-info"></i></a>
+      </div>
     </div>
   </div>
-
 </div>
