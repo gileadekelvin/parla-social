@@ -3,33 +3,30 @@
             class="fa fa-filter"></i>Filtros</button>
     <button type="button" class="btn btn-sm btn-outline-info"><i class="fa fa-download"></i>Download</button>
 </div>
-<div id="filters" [ngbCollapse]="isCollapsed" class="mt-3">
+<div id="filters-div" [ngbCollapse]="isCollapsed" class="mt-3">
     <div class="row d-flex">
         <div class="col-sm-12 col-md-4">
-            <input type="text" class="form-control col-md2" [(ngModel)]="searchParlamentar" placeholder="Parlamentar...">
+            <input type="text" class="form-control" [(ngModel)]="nome" placeholder="Parlamentar...">
         </div>
         <div class="col-sm-12 col-md-2">
-            <select class="form-control" id="partidoSelect">
+            <select class="form-control" id="partidoSelect" [(ngModel)]="partido">
                 <option>Partido</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>PT</option>
+                <option>PSL</option>
+                <option>PSOL</option>                
             </select>
         </div>
         <div class="col-sm-12 col-md-2">
-            <select class="form-control" id="casaSelect">
+            <select class="form-control" id="casaSelect" [(ngModel)]="casa">
                 <option>Casa</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>Câmara</option>
+                <option>Senado</option>                
             </select>
         </div>
     </div>
 </div>
 <div *ngIf="temResposta" class="card-group d-flex  mt-3">
-    <div class="d-flex" *ngFor="let parlamentar of parlamentares | filter : searchParlamentar | paginate: { itemsPerPage: 8, currentPage: page }">
+    <div class="d-flex" *ngFor="let parlamentar of parlamentares | filter : {nome: nome, partido: partido, casa: casa} | paginate: { itemsPerPage: 8, currentPage: page }">
         <app-parlamentar-card [parlamentar]="parlamentar"></app-parlamentar-card>
     </div>
 </div>

@@ -21,11 +21,15 @@ export class ParlamentarContainerComponent implements OnInit, OnDestroy {
   temResposta: boolean;
 
   isCollapsed = true;
-  searchParlamentar: string;
-
-  constructor(private parlamentarService: ParlamentarService) {
-    // Inicia na página inicial
+  
+  nome: string;
+  partido: string;
+  casa: String;
+  
+  constructor(private parlamentarService: ParlamentarService) {    
     this.page = 1;
+    this.partido = "Partido";
+    this.casa = "Casa";
   }
 
   ngOnInit() {
