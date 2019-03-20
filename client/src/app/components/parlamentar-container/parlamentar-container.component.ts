@@ -13,13 +13,15 @@ import { ParlamentarService } from '../../services/parlamentar.service';
 })
 export class ParlamentarContainerComponent implements OnInit, OnDestroy {
 
-
   private unsubscribe = new Subject();
 
-  page: number;  
+  page: number;
 
   parlamentares: Parlamentar[];
-  temResposta: boolean;  
+  temResposta: boolean;
+
+  isCollapsed = true;
+  searchParlamentar: string;
 
   constructor(private parlamentarService: ParlamentarService) {
     // Inicia na página inicial
