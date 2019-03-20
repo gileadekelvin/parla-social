@@ -1,9 +1,9 @@
 .card-header {
-    background: white;
+    background: white;    
 }
 
-.card-body {
-    background: #f8f9fa;
+.card-body {    
+    height: 2.5rem;
 }
 
 .name {
@@ -19,31 +19,26 @@
     font-size: 0.8rem;    
 }
 
-.img-circle {
-    width: 90px;
-    height: 90px;    
-}
-
 .img-parlamentar {
-    position: relative;
-    width: 90px;
-    height: 90px;
-    overflow: hidden;
-    border-radius: 50%;    
-    border: 4px solid #eee;
+    width: 50px;
+    height: 65px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);    
 }
 
 .icons {
-    text-align: center;    
+    text-align: center;  
+    height: 100%;  
 }
 
 .icon-social {
-    margin: auto;
+    margin: auto;    
 }
 
 .icon-social i {
     color: #b2bbbd;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding: 8px;
 } 
 
 .icon-social i:hover {
@@ -51,7 +46,7 @@
 }
 
 .card {
-    width: 14rem;
+    width: 16rem;
 }
 
 @media (max-width: 576.1px) { 

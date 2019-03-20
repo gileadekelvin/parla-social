@@ -1,19 +1,20 @@
 <div class="card mt-3 mx-2">
-  <div class="card-header">
-    <div class="row mt-3 d-flex justify-content-center">
-      <div class="img-parlamentar">
-        <img class="img-circle" [defaultImage]="'https://via.placeholder.com/100x130'"
-          [lazyLoad]="parlamentar.getFoto()" [offset]="100" />
+  <div class="d-flex card-header mt-2">
+    <div>
+      <img class="img-parlamentar" [defaultImage]="'https://via.placeholder.com/100x130'"
+        [lazyLoad]="parlamentar.getFoto()" [offset]="100" />
+    </div>
+    <div class="ml-3">
+      <div>
+        <span class="name">{{ formatString(parlamentar.electoral_name) }}</span>
+      </div>
+      <div>
+        <span class="badge badge-info mr-2">{{ parlamentar.party }} - {{ parlamentar.state }}</span>
+        <span class="badge badge-secondary">{{ getCargo(parlamentar.house)}}</span>
       </div>
     </div>
-    <div class="d-flex justify-content-center mt-2">
-      <span class="name">{{ formatString(parlamentar.electoral_name) }}</span>
-    </div>
-    <div class="d-flex justify-content-center"><span class="badge badge-info mr-2">{{ parlamentar.party }} -
-        {{ parlamentar.state }}</span> <span class="badge badge-secondary">{{ getCargo(parlamentar.house)}}</span>
-    </div>
   </div>
-  <div class="card-body">
+  <div class="card-body p-1">
     <div class="d-flex icons">
       <div class="icon-social">
         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/{{ parlamentar.twitter }}">
@@ -22,10 +23,6 @@
       <div class="icon-social">
         <a target="_blank" rel="noopener noreferrer" href="{{ parlamentar.facebook }}">
           <i class="fa fa-facebook"></i></a>
-      </div>
-      <div class="icon-social">
-        <a target="_blank" rel="noopener noreferrer" href="#">
-          <i class="fa fa-info"></i></a>
       </div>
     </div>
   </div>

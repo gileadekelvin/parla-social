@@ -8,7 +8,7 @@ const users = require("./routes/parlamentares");
 const app = express();
 
 const corsOption = {
-  origin: "http://localhost:4200",
+  origin: "http://192.168.15.9:4200",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   exposedHeaders: ["authorization"]
